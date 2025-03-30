@@ -1,0 +1,38 @@
+{
+    "name": "mui-wksp-catalog",
+    "version": "0.0.1",
+    "private": true,
+    "env": {
+        "WORKSPACE": "~wrg/workspaces/mui-wksp-catalog"
+    },
+    "scripts": {
+        "typecheck": "tsc --project tsconfig.json --noEmit",
+        "build": "tsc; run-scripts/prepare-package; npm pack",
+        "postbuild": "echo 'After build '",
+        "test": "jest"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "overrides": {
+        "glob": "10.4.2"
+    },
+    "devDependencies": {
+        "tsc": "^2.0.4",
+        "tsx": "^4.19.3",
+        "typescript": "^4.9.5"
+    },
+    "dependencies": {
+        "glvlib": "file:local_package_overrides/glvlib"
+    },
+    "description": "Scans workspaces for README files and .git directories ... those are the ones we might be working on.",
+    "main": "test/try-walker.test.ts",
+    "directories": {
+        "test": "test"
+    },
+    "author": "wrg",
+    "license": "MIT"
+}
