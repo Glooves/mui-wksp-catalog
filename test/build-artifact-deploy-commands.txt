@@ -1,0 +1,79 @@
+# My original file walker: Done in perl (not that it's a bad thing)
+#
+ 2358* list_files_by_date.pl ..
+ 2359* list_files_by_date.pl -s ..
+ 2362* cd taskbox
+
+#
+# Some context, how to run a single .ts application or test
+
+ 2379* cd packages/walker
+ 2382* tsx walker.ts -h
+ 2383* tsx walker.ts -e node_modules .git -m .tsx -d ~/workspaces
+
+ 2408  wksp mui-wksp-catalog
+ 2411  cat test/press2meco.test.ts
+ 2412  cat test/mui-start.test.ts
+ 2413  ls run-scripts
+ 2414  cd ..
+
+ 2440* tsx  $WORKSPACE/run-scripts/do1tsfile.ts test/try-walker.test.ts
+ 
+# Install newer file and dir walkers to built-art and opt
+ 2365* dir-walker
+ 2366* ../categorizer/dist/bin/dir-walker .
+ 2367* ../categorizer/dist/bin/dir-walker -r .
+
+
+ 2443  ls /opt/bin
+ 
+ 2444  wksp more_webpack_practice
+ cd more_webpack_practice # subdirectory
+ 2451  mkdir bin test src admin packages
+ 
+ 2456  cp -pr ../packages/ .
+ 2457  cd packages
+ 2459  cd pug2html
+ 2462  cp pug2html pug2html.* ../../bin
+  2464  cd ../walker
+ 2466  cp walker{,.*} ../../bin
+ 
+ 2467  cd ../../bin; ls -altr
+ 2470  cp -pr * /opt/bin
+ 2479  cp -pr $WORKSPACE/node_modules . # ... Should be more selective 
+ 2471  ls -latr /opt/bin
+ 
+ # Installation into /opt/bin complete, now
+ # Test the programs (walker and pug2html):
+ 2472  echo $PATH
+ 2477  walker music
+ 2480  df 
+ 2481  df /opt
+ 2482  type walker
+ 2483  walker .
+ 2485  cd 
+ 2486  wksp
+ 2488  walker test
+ 2489  walker run-scripts
+ 2490  cd views
+ 2492  pug2html template.pug
+ 2493  ls -latr
+ 2495  cat template.html
+ 
+ # Now set up dir-walker ...
+ 2496  workspace categorizer
+ 2499  cd dist/bin
+ 2503  cp -p dir-walker /opt/bin
+ 2505  cd ../src
+ 2506  cp -p dir-walker.* /opt/bin
+ 
+ # Test dir-walker installed into dist/bin
+ 2508 cd
+ 2509  dir-walker -r -L 3workspaces/categorizer
+ 2510  dir-walker -r -L 3 workspaces/categorizer
+ 2511  dir-walker -r -L 3 -e node_modules .git -- workspaces/categorizer
+ 2512  (cd workspaces; dir-walker -r -L 3 -e node_modules .git -- categorizer)
+ 
+ 2513  walker workspaces/categorizer
+ 2514  walker -e testing_folder node_modules .git -- workspaces/categorizer
+ 2515  walker -e testing_folder node_modules .git -- workspaces/categorizer 
