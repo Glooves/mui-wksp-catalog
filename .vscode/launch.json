@@ -1,0 +1,46 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+                {
+            "name": "Run tsx <file>",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "tsx",
+            "cwd": "${workspaceFolder}",
+            "args": ["src/index.tsx"]
+        },        
+        {
+            "name": "start server locally serving port 4001",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "node",
+            "runtimeArgs": [
+                "src/server.js"
+            ],
+            "runtimeArgs_off": [
+                "src/server.js", "--remote-debugging-port=9222"
+            ],
+            "env": { 
+                "SERVER_PORT": "4001",
+                "INDEX": "index-try2.html",
+                "DEBUG" : "yes"
+            }
+        },
+        {
+            "name": "Launch Program",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/src/App.tsx",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        }
+    ]
+}

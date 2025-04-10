@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+    padding: 1rem;
+    background-image: url("images/GraphPaper-20230225-3x3.png");
+}
+* {
+    color: #216;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    font-weight: 400;
+}
+
+.inset {
+    width: 200px;
+    border-style: solid;
+    margin-left: 3rem;
+    padding: 3px;
+    border-width: 1pt;
+}
+
+.boxed_anchor {
+    width: auto;
+    border: 1px solid #888888;
+    padding: 2px;
+    text-align: center;
+}
+.wrg_fit-picture {
+    width: 500px;
+}
+
+p { text-indent: 0;}
+h1 {
+    font-family: Palatino, serif;
+    font-size: 30pt;
+    font-style: oblique;
+}
+h2 {
+    margin-left: 1em;
+    font-size: 20pt;
+    font-weight: bold;
+    font-style: italic;
+}
+h3 {
+    margin-left: 1em;
+    font-size: 14pt;
+    font-style: italic;
+}
+
+.glvHdrStyle {
+    font-size: 20pt;
+    font-style: oblique;
+}
